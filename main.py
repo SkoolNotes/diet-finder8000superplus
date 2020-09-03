@@ -1,10 +1,11 @@
-import csv
+import pandas
+
+PATH = 'nndb_flat.csv'
+
 
 def main():
-    with open(PATH, newline='') as csvf:
-        reader = csv.reader(csvf, delimiter=' ', quotechar='"');
-        for row in reader:
-            print(', '.join(row))
+    f = pandas.read_csv(PATH)
+    print(f)
 
 if __name__ == '__main__':
     main();
