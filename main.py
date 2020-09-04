@@ -28,6 +28,8 @@ config = {
         'Tryptophan'   ,
         'Methionine'   ,
         'Histidine'    ,
+        'Riboflavin'   , # vitamain b2
+        'Phylloquinone', # vitamain K
         # 'Protein'      ,
     ],
     'target': [ # in miligrams
@@ -40,6 +42,7 @@ config = {
         5   * weight,
         19  * weight,
         14  * weight,
+
         # 0# 0.8 *weight # TODO: PROTIEN WEIGHT, PUT BACK, BELOW IS PLACEHOLDER
     ],
     'foods': [
@@ -47,20 +50,22 @@ config = {
         # 334332, # sweet and sour pork chinese resturaunt
         327194, # cantaloupe amino acids
         327043, # kiwi
-        747910, # eggs (whole)
         # 325937, # turkey breakfast saucage (mild)
         326457, # carrots whole unprepared
-        # 321692, # broccoli
+        321692, # broccoli
+        327388, # pass 2 oranges
+        326690, # mustard
     ],
     'foodnames': [
         # '2% melk',
         # 'sweet sour pork',
         'cantaloupe',
         'kiwi',
-        'eggz',
         # 'turkey saucage',
-        'carrots, hole, unprepared',
-        # 'broccoli'
+        'carrots, whole, unprepared',
+        'broccoli',
+        'pass 2 oranges',
+        'mustard'
     ]
 }
 
@@ -78,7 +83,7 @@ def olve(names, nm, rdi):
     output = nnls(nm, rdi)[0]
     print(nm.dot(output))
     for i,n in enumerate(names):
-        print(f"You better freaking goddamn eat {output[i]/1000:.6f}g o'", n)
+        print(f"You better fucking goddamn eat {output[i]/10:.6f}g o'", n)
     return output
 
 def main():
@@ -106,4 +111,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
