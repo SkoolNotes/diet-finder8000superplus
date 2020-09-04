@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy  as np
+from scipy.optimize import nnls
 import pprint
 
 weight = 60
@@ -27,9 +28,9 @@ config = {
         'Tryptophan'   ,
         'Methionine'   ,
         'Histidine'    ,
-        'Protein'      ,
+        # 'Protein'      ,
     ],
-    'target': [
+    'target': [ # in miligrams
         33  *weight,
         24  *weight,
         43  *weight,
@@ -39,18 +40,29 @@ config = {
         5   *weight,
         19  *weight,
         14  *weight,
-        0# 0.8 *weight # TODO: PROTIEN WEIGHT, PUT BACK, BELOW IS PLACEHOLDER
+        # 0# 0.8 *weight # TODO: PROTIEN WEIGHT, PUT BACK, BELOW IS PLACEHOLDER
     ],
     'foods': [
-        320146, # 2% milk
-        334332, # sweet and sour pork chinese resturaunt
+        # 320146, # 2% milk
+        # 334332, # sweet and sour pork chinese resturaunt
         327194, # cantaloupe amino acids
-        321692, # broccoli
+        327043, # kiwi
+        747910, # eggs (whole)
+        # 325937, # turkey breakfast saucage (mild)
+        326457, # carrots whole unprepared
+        # 321692, # broccoli
     ],
-    'foodnames': [ '2% melk', 'sweet sour pork', 'cantaloupe', 'broccoli' ]
+    'foodnames': [
+        # '2% melk',
+        # 'sweet sour pork',
+        'cantaloupe',
+        'kiwi',
+        'eggz',
+        # 'turkey saucage',
+        'carrots, hole, unprepared',
+        # 'broccoli'
+    ]
 }
-
-# 790345
 
 def read_data():
     return {
@@ -62,10 +74,11 @@ def read_data():
     }
 
 def olve(names, nm, rdi):
-    output = np.linalg.lstsq(nm, rdi, rcond=None)[0]
-    # print(output)
+    # output = np.linalg.lstsq(nm, rdi, rcond=None)[0]
+    output = nnls(nm, rdi)[0]
+    print(nm.dot(output))
     for i,n in enumerate(names):
-        print("You better freaking goddamn eat", output[i], "grams", n)
+        print(f"You better freaking goddamn eat {output[i]/1000:.6f}g o'", n)
     return output
 
 def main():
@@ -84,8 +97,7 @@ def main():
             except ValueError:
                 continue
 
-    # print(food_by_id)
-
+    print(food_by_id)
     olve(config['foodnames'], food_by_id, config['target'])
 
     # for fid in legit_ids:
