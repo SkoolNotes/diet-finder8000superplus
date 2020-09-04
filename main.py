@@ -2,13 +2,14 @@ import pandas as pd
 import numpy  as np
 import pprint
 
-print("warning: pounds do not currently work")
-units = input("what units do you want to use? Type p for pounds and k for kilograms ")
-weight = 0
-if units == "p":
-    weight = (input("what is your wieght in pounds? ")) * 2.20462262
-if units == "k":
-    weight = input("what is your weight in kilograms? ")
+weight = 60
+# TODO: add back \/
+# print("warning: pounds do not currently work")
+# units = input("what units do you want to use? Type p for pounds and k for kilograms ")
+# if units == "p":
+#     weight = (int(input("what is your wieght in pounds? "))) * 2.20462262
+# if units == "k":
+#     weight = int(input("what is your weight in kilograms? "))
 
 config = {
     'paths': {
@@ -16,18 +17,33 @@ config = {
         'food_nutrient': 'data/food_nutrient.csv',
         'food_name': 'data/food.csv'
     },
-    'rdi': {
-        'Phenylalanine': 33*weight,
-        'Valine': 24*weight,
-        'Leucine': 43*weight,
-        'Isoleucine': 19*weight,
-        'Lysine': 38*weight,
-        'Threonine': 20*weight,
-        'Tryptophan': 5*weight,
-        'Methionine': 19*weight,
-        'Histidine': 14*weight,
-        'Protein': 0.8*weight
-    }
+    'nutrients': [
+        'Phenylalanine',
+        'Valine'       ,
+        'Leucine'      ,
+        'Isoleucine'   ,
+        'Lysine'       ,
+        'Threonine'    ,
+        'Tryptophan'   ,
+        'Methionine'   ,
+        'Histidine'    ,
+        'Protein'      ,
+    ],
+    'weights': [
+        33  *weight,
+        24  *weight,
+        43  *weight,
+        19  *weight,
+        38  *weight,
+        20  *weight,
+        5   *weight,
+        19  *weight,
+        14  *weight,
+        0.8 *weight
+    ],
+    'foods': [
+        320146, # 2% milk
+    ]
 }
 
 # 790345
@@ -47,28 +63,37 @@ def main():
     }
     csvs['food_nutrient'] = csvs['food_nutrient'].iloc[:, :4]
 
-    food_by_id = {}
-    for nutrient in config['rdi']:
+    # food_by_id = [[0]*len(config['nutrients'])]*len(config['foods'])
+    legit_ids = set()
+    food_by_id = np.zeros((len(config['nutrients']), len(config['foods'])))
+    for ni, nutrient in enumerate(config['nutrients']):
         insts = csvs['subsample_result'][csvs['subsample_result']['nutrient_name'] == nutrient]
         insts = insts[insts.columns[0]]
-        for fid in insts:
-            amount = csvs['food_nutrient'][csvs['food_nutrient']['id'] == fid]
-            if (int(amount['fdc_id']) in food_by_id):
-                food_by_id[int(amount['fdc_id'])][nutrient] = float(amount['amount'])
-            else:
-                food_by_id[int(amount['fdc_id'])] = {nutrient: float(amount['amount'])}
+        for nid in insts:
+            amount = csvs['food_nutrient'][csvs['food_nutrient']['id'] == nid]
+            legit_ids.add(int(amount['fdc_id']))
+            try:
+                # print(int(amount['fdc_id']) in config['foods'])
+                ind = config['foods'].index(int(amount['fdc_id']))
+                food_by_id[ni, ind] = float(amount['amount'])
+            except ValueError:
+                continue
 
-    food_by_name = {}
-    for k in food_by_id:
-        name = (csvs['food_name'][csvs['food_name']['fdc_id'] == k]['description']
-                .squeeze().strip())
-        food_by_name[name] = food_by_id[k]
+    for fid in legit_ids:
+        name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
+        print(fid, name)
 
-def olve(nm, rdi):
-    output = np.linalg.lstsq(names, nm, rdi)[0]
-    for i in range(len(names)):
-        print("You better freaking goddamn eat" + (output[0][i][0])*100 + "grams" + names[i])
-    return output
+            # if (int(amount['fdc_id']) in food_by_id):
+            #     food_by_id[int(amount['fdc_id'])][nutrient] = float(amount['amount'])
+            # else:
+            #     food_by_id[int(amount['fdc_id'])] = {nutrient: float(amount['amount'])}
+
+    # food_by_name = []
+    # for k in food_by_id:
+    #     name = (csvs['food_name'][csvs['food_name']['fdc_id'] == k]['description']
+    #             .squeeze().strip())
+    #     food_by_name[name] = food_by_id[k]
+
     # pp = pprint.PrettyPrinter(indent=4)
     # pp.pprint(food_by_name)
 
