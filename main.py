@@ -32,37 +32,46 @@ config = {
 
 # 790345
 
+def olve(names, nm, rdi):
+    output = np.linalg.lstsq(names, nm, rdi)[0]
+    for i in range(len(names)):
+        print("You better freaking goddamn eat" + output[0][i][0] + "grams" + names[i])
+    return output
+
 def main():
     csvs = {
         'subsample_result': pd.read_csv(config['paths']['subsample_result'],
             dtype={ 'nutrient_name': 'string' }),
         'food_nutrient':    pd.read_csv(config['paths']['food_nutrient'], low_memory=False),
-        # 'food_name':        pd.read_csv(config['paths']['food_name'])
+        'food_name':        pd.read_csv(config['paths']['food_name'])
     }
     csvs['food_nutrient'] = csvs['food_nutrient'].iloc[:, :4]
 
-    food = {}
+    food_by_id = {}
     for nutrient in config['rdi']:
         insts = csvs['subsample_result'][csvs['subsample_result']['nutrient_name'] == nutrient]
         insts = insts[insts.columns[0]]
         for fid in insts:
             amount = csvs['food_nutrient'][csvs['food_nutrient']['id'] == fid]
-            if (int(amount['fdc_id']) in food):
-                food[int(amount['fdc_id'])][nutrient] = float(amount['amount'])
+            if (int(amount['fdc_id']) in food_by_id):
+                food_by_id[int(amount['fdc_id'])][nutrient] = float(amount['amount'])
             else:
-                food[int(amount['fdc_id'])] = {nutrient: float(amount['amount'])}
+                food_by_id[int(amount['fdc_id'])] = {nutrient: float(amount['amount'])}
 
-    pp = pprint.PrettyPrinter(indent=4)
-    pp.pprint(food)
+    food_by_name = {}
+    for k in food_by_id:
+        name = (csvs['food_name'][csvs['food_name']['fdc_id'] == k]['description']
+                .squeeze().strip())
+        food_by_name[name] = food_by_id[k]
 
 def olve(nm, rdi):
     output = np.linalg.lstsq(names, nm, rdi)[0]
     for i in range(len(names)):
         print("You better freaking goddamn eat" + (output[0][i][0])*100 + "grams" + names[i])
     return output
+    # pp = pprint.PrettyPrinter(indent=4)
+    # pp.pprint(food_by_name)
 
-    
-    
 if __name__ == '__main__':
     main()
 
