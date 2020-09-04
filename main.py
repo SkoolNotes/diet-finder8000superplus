@@ -63,7 +63,7 @@ config = {
         'cantaloupe',
         'kiwi',
         # 'turkey saucage',
-        'carrots, hole, unprepared',
+        'carrots, whole, unprepared',
         'broccoli',
         'pass 2 oranges',
         'mustard'
@@ -84,7 +84,7 @@ def olve(names, nm, rdi):
     output = nnls(nm, rdi)[0]
     print(nm.dot(output))
     for i,n in enumerate(names):
-        print(f"You better freaking goddamn eat {output[i]/10:.6f}g o'", n)
+        print(f"You better fucking goddamn eat {output[i]/10:.6f}g o'", n)
     return output
 
 def main():
@@ -112,4 +112,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
