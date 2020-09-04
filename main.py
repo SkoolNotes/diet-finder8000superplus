@@ -3,7 +3,8 @@ import numpy  as np
 
 DB_PATH = 'nndb_flat.csv' # 37 nutritional dimensions
 
-DIET_SET = [1001, 6194, 35056] # salted butter, chicken broth, raw seal meat
+# DIET_SET = [1001, 6194, 35056] # salted butter, chicken broth, raw seal meat
+# 790345
 
 def main():
     data = pd.read_csv(DB_PATH)
