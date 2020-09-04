@@ -29,7 +29,7 @@ config = {
         'Histidine'    ,
         'Protein'      ,
     ],
-    'weights': [
+    'target': [
         33  *weight,
         24  *weight,
         43  *weight,
@@ -39,31 +39,37 @@ config = {
         5   *weight,
         19  *weight,
         14  *weight,
-        0.8 *weight
+        0# 0.8 *weight # TODO: PROTIEN WEIGHT, PUT BACK, BELOW IS PLACEHOLDER
     ],
     'foods': [
         320146, # 2% milk
-    ]
+        334332, # sweet and sour pork chinese resturaunt
+        327194, # cantaloupe amino acids
+        321692, # broccoli
+    ],
+    'foodnames': [ '2% melk', 'sweet sour pork', 'cantaloupe', 'broccoli' ]
 }
 
 # 790345
 
+def read_data():
+    return {
+        'subsample_result': pd.read_csv(config['paths']['subsample_result'],
+            dtype={ 'nutrient_name': 'string' }),
+        'food_nutrient':    pd.read_csv(config['paths']['food_nutrient'],
+            low_memory=False).iloc[:, :4],
+        'food_name':        pd.read_csv(config['paths']['food_name'])
+    }
+
 def olve(names, nm, rdi):
-    output = np.linalg.lstsq(names, nm, rdi)[0]
-    for i in range(len(names)):
-        print("You better freaking goddamn eat" + output[0][i][0] + "grams" + names[i])
+    output = np.linalg.lstsq(nm, rdi, rcond=None)[0]
+    # print(output)
+    for i,n in enumerate(names):
+        print("You better freaking goddamn eat", output[i], "grams", n)
     return output
 
 def main():
-    csvs = {
-        'subsample_result': pd.read_csv(config['paths']['subsample_result'],
-            dtype={ 'nutrient_name': 'string' }),
-        'food_nutrient':    pd.read_csv(config['paths']['food_nutrient'], low_memory=False),
-        'food_name':        pd.read_csv(config['paths']['food_name'])
-    }
-    csvs['food_nutrient'] = csvs['food_nutrient'].iloc[:, :4]
-
-    # food_by_id = [[0]*len(config['nutrients'])]*len(config['foods'])
+    csvs = read_data()
     legit_ids = set()
     food_by_id = np.zeros((len(config['nutrients']), len(config['foods'])))
     for ni, nutrient in enumerate(config['nutrients']):
@@ -73,29 +79,18 @@ def main():
             amount = csvs['food_nutrient'][csvs['food_nutrient']['id'] == nid]
             legit_ids.add(int(amount['fdc_id']))
             try:
-                # print(int(amount['fdc_id']) in config['foods'])
                 ind = config['foods'].index(int(amount['fdc_id']))
                 food_by_id[ni, ind] = float(amount['amount'])
             except ValueError:
                 continue
 
-    for fid in legit_ids:
-        name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
-        print(fid, name)
+    # print(food_by_id)
 
-            # if (int(amount['fdc_id']) in food_by_id):
-            #     food_by_id[int(amount['fdc_id'])][nutrient] = float(amount['amount'])
-            # else:
-            #     food_by_id[int(amount['fdc_id'])] = {nutrient: float(amount['amount'])}
+    olve(config['foodnames'], food_by_id, config['target'])
 
-    # food_by_name = []
-    # for k in food_by_id:
-    #     name = (csvs['food_name'][csvs['food_name']['fdc_id'] == k]['description']
-    #             .squeeze().strip())
-    #     food_by_name[name] = food_by_id[k]
-
-    # pp = pprint.PrettyPrinter(indent=4)
-    # pp.pprint(food_by_name)
+    # for fid in legit_ids:
+    #     name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
+    #     print(fid, name)
 
 if __name__ == '__main__':
     main()
