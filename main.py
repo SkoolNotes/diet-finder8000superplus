@@ -47,6 +47,14 @@ def main():
     pp = pprint.PrettyPrinter(indent=4)
     pp.pprint(food)
 
+def olve(nm, rdi):
+    output = np.linalg.lstsq(names, nm, rdi)[0]
+    for i in range(len(names)):
+        print("You better freaking goddamn eat" + output[0][i][0] + "grams" + names[i])
+    return output
+
+    
+    
 if __name__ == '__main__':
     main()
 
