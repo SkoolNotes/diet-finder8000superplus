@@ -6,8 +6,8 @@ print("warning: pounds do not currently work")
 units = input("what units do you want to use? Type p for pounds and k for kilograms ")
 weight = 0
 if units == "p":
-    #do unit conversion stuff
-if units == "k"
+    weight = (input("what is your wieght in pounds? ")) * 2.20462262
+if units == "k":
     weight = input("what is your weight in kilograms? ")
 
 config = {
