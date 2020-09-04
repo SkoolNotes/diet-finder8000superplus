@@ -56,6 +56,7 @@ config = {
         327388, # pass 2 oranges
         326690, # mustard
     ],
+
     'foodnames': [
         # '2% melk',
         # 'sweet sour pork',
@@ -83,7 +84,7 @@ def olve(names, nm, rdi):
     output = nnls(nm, rdi)[0]
     print(nm.dot(output))
     for i,n in enumerate(names):
-        print(f"You better fucking goddamn eat {output[i]/10:.6f}g o'", n)
+        print(f"You better goddamn eat {output[i]/10:.6f}g o'", n)
     return output
 
 def main():
