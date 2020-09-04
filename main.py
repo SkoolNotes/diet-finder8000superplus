@@ -52,8 +52,9 @@ def main():
 
     food_by_name = {}
     for k in food_by_id:
-        name = csvs['food_name'][csvs['food_name']['fdc_id'] == k]['description']
-        food_by_name[str(name)] = food_by_id[k]
+        name = (csvs['food_name'][csvs['food_name']['fdc_id'] == k]['description']
+                .squeeze().strip())
+        food_by_name[name] = food_by_id[k]
 
     pp = pprint.PrettyPrinter(indent=4)
     pp.pprint(food_by_name)
