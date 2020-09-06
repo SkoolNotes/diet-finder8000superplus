@@ -1,0 +1,186 @@
+326660 Mustard, Yellow, Prepared, Store Brand, Amino Acids - NFY0210MW
+327173 Cantaloupe, Raw, Pass 2, Region 3, n/a, Yes, Amino Acids - NFY010DBF
+748038 Eggs, yolk
+322569 MILK, WHOLE
+327194 Cantaloupe, Raw, Pass 2, Region 1, n/a, Yes, Amino Acids - NFY010CXY
+748059 Eggs, yolk
+324125 BEEF BREAKFAST SAUSAGE, BANQUET BROWN N SERVE SAUSAGE LINKS
+322591 MILK, WHOLE
+326690 Mustard, Yellow, Prepared, Store Brand, Amino Acids - NFY0210NX
+748070 Eggs, yolk
+322088 MILK, 1%
+320046 MILK, 2%
+748081 Eggs, yolk
+322615 MILK, WHOLE
+322108 MILK, 1%
+326719 Mission Figs, Dried, Region 3, n/a, Yes, Amino Acids  - N
+320065 MILK, 2%
+329795 Amino Acids, Cheese, dry white, Queso seco, mixed composite (MD, NM) - NFY09009S
+322631 MILK, WHOLE
+748105 Eggs, yolk
+748106 Eggs, yolk
+327758 Romaine Lettuce, Pass 2, Region 4 - Amino Acids - NFY0105IM
+322131 MILK, 1%
+748117 Eggs, yolk
+320088 MILK, 2%
+326744 Mission Figs, Dried, Region 2, n/a, Yes, Amino Acids  - N
+322650 MILK, WHOLE
+329818 Amino Acids, Cheese, dry white, Queso seco, mixed composite (NY, TX-TR) - NFY09008I
+327263 Nectarines, Raw, Pass 2, Region 1, n/a, Yes, Amino Acids - NFY010BUV
+748129 Eggs, whole
+322153 MILK, 1%
+326250 Carrots, sliced or crinkle cut, frozen, unprepared - Amino acids - NF9913WE
+320107 MILK, 2%
+322669 MILK, WHOLE
+748653 Eggs, whole
+748144 Eggs, yolk
+327283 Nectarines, fresh, Region 3, n/a, Yes - Amino Acids, NF0008NT
+331379 Amino Acids, Chicken, skin, raw, from drumsticks and thighs, non-enhanced (FL1,MO1,NY1) - 14B-01-04-AminoAcids
+326775 Figs, Dried, Pass 2, Region 1, n/a, No, Amino Acids - NFY010CDT
+327800 Romaine Lettuce, Pass 2, Region 1 - Amino Acids - NFY0105G6
+748155 Eggs, yolk
+748670 Eggs, whole
+320127 MILK, 2%
+332419 Pears, Bartlett, Regions 1 & 4, n/a, Yes, Amino Acids - NFY000090
+748166 Eggs, yolk
+322191 MILK, 1%
+748687 Eggs, whole
+333457 Amino Acids, Pollock, raw (NATIONAL) - NFY060DR9
+320146 MILK, 2%
+326299 Carrots, sliced or crinkle cut, frozen, unprepared - Amino acids - NF9913T9
+321692 Broccoli, Pass 2, Region 1, n/a, Yes, Amino Acids - NFY010CUW
+331419 Amino Acids, Chicken, dark meat, lean only, thigh, raw, non-enhanced (FL1,MO1,NY1) - 14B-07-04-AminoAcids
+332444 Pears, Bosc, Regions 1 & 4, n/a, Yes, Amino Acids - NFY0000BM
+330911 Amino Acids, Chicken, skin, raw, from drumsticks and thighs, non-enhanced (CO1,CT1,IN1) - 14B-01-03-AminoAcids
+748704 Eggs, whole
+322210 MILK, 1%
+327332 Nectarines, Raw, Pass 2, Region 4, n/a, Yes, Amino Acids - NFY010BXD
+748197 Eggs, yolk
+321702 Broccoli, Region 3, n/a, Yes, Amino Acids - NFY0104BG
+327340 Nectarines, fresh, Region 1, n/a, Yes - Amino Acids, NF0008M5
+329900 Amino Acids, Greek yogurt, CHOBANI PLAIN NON-FAT (AL1,CA1) - NFY09110D
+748209 Eggs, yolk
+332466 Pears, Green Anjou, Regions 1 & 4, n/a, Yes, Amino Acids - NFY0000H3
+322743 MILK, WHOLE
+747707 Eggs, whites
+748221 Eggs, yolk
+327872 Romaine Lettuce, Region 2, n/a, Yes - Amino Acids - NFY0101RR
+331461 Amino Acids, Chicken, dark meat, lean only, drumstick, raw, non-enhanced (FL1,MO1,NY1) - 14B-04-04-AminoAcids
+322252 MILK, SKIM
+327888 Romaine Lettuce, Region 3, n/a, Yes - Amino Acids - NFY0101SR
+747730 Eggs, whole
+748754 Eggs, whole
+322772 MILK, WHOLE
+320213 MILK, 2%
+332501 Pears, Bartlett, Regions 2 & 3, n/a, Yes, Amino Acids - NFY00008B
+327388 Oranges, Navel, Pass 2, Region 4, n/a, Yes - Amino Acids, NFY01076U
+322271 MILK, SKIM
+747744 Eggs, yolk
+326373 Carrots, sliced or crinkle cut, frozen, unprepared - Amino acids - NF9913QJ
+320233 MILK, 2%
+747755 Eggs, whites
+322796 MILK, WHOLE
+330477 Amino Acids, Ground turkey, 93% lean, 7% fat, raw (National)
+331504 Amino Acids, Chicken, skin, raw, from drumsticks and thighs, non-enhanced (AL1,CA1) - 14B-01-05-AminoAcids
+332528 Pears, Bosc, Regions 2 & 3, n/a, Yes, Amino Acids - NFY0000AZ
+322290 MILK, SKIM
+747763 Eggs, whites
+748787 Eggs, whole
+321786 Broccoli, Region 2, n/a, Yes, Amino Acids - NFY010496
+747771 Eggs, whites
+327423 Oranges, Navel, Raw, Region 1, n/a, Yes, Amino Acids - NFY01040B
+320256 MILK, 2%
+322817 MILK, WHOLE
+334594 Amino Acids, Tamale, Pork (CA-LA,CA-SD) - NFY0902AO
+747778 Eggs, whites
+322309 MILK, SKIM
+332549 Pears, Green Anjou, Regions 2 & 3, n/a, Yes, Amino Acids - NFY0000GE
+748805 Eggs, whole
+790281 BUTTER, STICK, SALTED
+321804 Broccoli, Cooked, Region 2, n/a, Yes, Amino Acids - NFY0104A9
+326413 Carrots, whole, unprepared - Amino acids - NF99143T
+331025 Amino Acids, Chicken, dark meat, lean only, drumstick, raw, non-enhanced (CO1,CT1,IN1) - 14B-04-03-AminoAcids
+331541 Amino Acids, Chicken, dark meat, lean only, thigh, raw, non-enhanced (AL1,CA1) - 14B-07-05-AminoAcids
+320278 MILK, 2%
+748823 Eggs, whole
+334616 Amino Acids, Tamale, Pork (TX-TR) - NFY09028C
+326426 Carrots, whole, unprepared, Amino acids Repeat - NF991444
+747803 Eggs, yolk
+322332 MILK, SKIM
+325410 Peaches, Raw, Pass 2, Region 3, n/a, Yes, Amino Acids - NFY010BT5
+322854 MILK, WHOLE
+747814 Eggs, whites
+326952 Kiwi, Region 2, n/a, Yes, Amino Acids  - NFY0100SS
+326441 Carrots, whole, unprepared - Amino acids - NF99140D
+748840 Eggs, whole
+747822 Eggs, whites
+325423 Peaches, Raw, Pass 2, Region 1, n/a, Yes, Amino Acids - NFY010BRJ
+322352 MILK, 1%
+325937 TURKEY BREAKFAST SAUSAGE, JENNIE O - MILD
+326964 Kiwi, Pass 2, Region 1, n/a, Yes, Amino Acids - NFY010BYJ
+747830 Eggs, whites
+747831 Eggs, whites
+326457 Carrots, whole, unprepared, Amino acids Repeat - NF99140H
+322874 MILK, WHOLE
+327481 Oranges, Navel, Raw, Region 3, n/a, Yes, Amino Acids - NFY01042A
+320316 MILK, 2%
+321859 Broccoli, Pass 2, Region 4, n/a, Yes, Amino Acids - NFY010CVQ
+331587 Amino Acids, Chicken, skin, raw, from drumsticks and thighs, non-enhanced (CA2,NC1) - 14B-01-02-AminoAcids
+747848 Eggs, whites
+320335 MILK, 2%
+334671 Amino Acids, Pupusas, Bean, flat stuffed corn biscuit (TX-TR) - NFY0901VO
+747857 Eggs, whites
+321875 Broccoli, steamed, Pass 2, Region 4, n/a, Yes, Amino Acids - NFY010CWM
+323413 CHEESE, RICOTTA, WHOLE MILK, STORE/OTHER
+326997 Kiwi, Region 3, n/a, Yes, Amino Acids  - NFY0100TX
+748889 Eggs, whole
+330075 Amino Acids, Greek yogurt, FAGE PLAIN NONFAT (CA2,NC1) - NFY091147
+747872 Eggs, whites
+790368 BUTTER, STICK, SALTED
+334691 Amino Acids, Pupusas, Bean, flat stuffed corn biscuit (CA-LA) - NFY0901XO
+323430 CHEESE, RICOTTA, WHOLE MILK, GALBANI
+331622 Amino Acids, Chicken, dark meat, lean only, thigh, raw, non-enhanced (CA2,NC1) - 14B-07-02-AminoAcids
+747880 Eggs, whites
+748907 Eggs, whole
+747887 Eggs, yolk
+790386 BUTTER, STICK, SALTED
+322419 MILK, SKIM
+334710 Amino Acids, Pupusas, Bean, flat stuffed corn biscuit (MD,NM) - NFY0901WO
+748922 Eggs, whole
+321923 MILK, 1%
+327043 Kiwi, Pass 2, Region 4, n/a, Yes, Amino Acids - NFY010C0C
+747910 Eggs, whole
+790408 BUTTER, STICK, SALTED
+327562 Strawberries, fresh, Region 3, n/a, Yes - Amino Acids, NF0008KH
+331661 Amino Acids, Chicken, dark meat, lean only, drumstick, raw, non-enhanced (CA2,NC1) - 14B-04-02-AminoAcids
+748942 Eggs, whole
+322451 MILK, SKIM
+330133 Amino Acids, Greek yogurt, DANNON OIKOS PLAIN NON-FAT (CO1,CT1) - NFY09115P
+747925 Eggs, whites
+321943 MILK, 1%
+790423 BUTTER, STICK, SALTED
+747933 Eggs, whites
+747940 Eggs, whites
+321962 MILK, 1%
+322474 MILK, SKIM
+747948 Eggs, whites
+790442 BUTTER, STICK, SALTED
+331700 Amino Acids, Chicken, dark meat, lean only, drumstick, raw, non-enhanced (AL1,CA1) - 14B-04-05-AminoAcids
+747958 Eggs, whole
+321981 MILK, 1%
+322495 MILK, SKIM
+747987 Eggs, whites
+322004 MILK, 1%
+327636 Strawberries, fresh, Region 1, n/a, Yes - Amino Acids, NF0008IT
+334293 Amino Acids, Sweet And Sour Pork, Chinese restaurant (CA1,VA) - NFY0903J2
+322523 MILK, SKIM
+747995 Eggs, whites
+748003 Eggs, yolk
+326629 Mustard, Yellow, Prepared, French's Classic Yellow Mustard, Amino Acids - NFY0210KT
+322023 MILK, SKIM
+334313 Amino Acids, Sweet And Sour Pork, Chinese restaurant (MI1,VA3) - NFY0903LM
+331244 Amino Acids, Chicken, dark meat, lean only, thigh, raw, non-enhanced (CO1,CT1) - 14B-07-03-AminoAcids
+322542 MILK, SKIM
+748015 Eggs, yolk
+748027 Eggs, yolk
+334332 Amino Acids, Sweet And Sour Pork, Chinese restaurant (CO1,CT1) - NFY0903KC

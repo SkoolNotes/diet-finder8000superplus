@@ -28,8 +28,8 @@ config = {
         'Tryptophan'   ,
         'Methionine'   ,
         'Histidine'    ,
-        'Riboflavin'   , # vitamain b2
-        'Phylloquinone', # vitamain K
+        # 'Riboflavin'   , # vitamain b2
+        # 'Phylloquinone', # vitamain K
         # 'Protein'      ,
     ],
     'target': [ # in miligrams
@@ -103,12 +103,12 @@ def main():
             except ValueError:
                 continue
 
-    print(food_by_id)
+    # print(food_by_id)
     olve(config['foodnames'], food_by_id, config['target'])
 
-    # for fid in legit_ids:
-    #     name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
-    #     print(fid, name)
+    for fid in legit_ids:
+        name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
+        print(fid, name)
 
 if __name__ == '__main__':
     main()
