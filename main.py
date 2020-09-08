@@ -47,46 +47,46 @@ config = {
     ],
     'foods': [
         # 320146, # 2% milk
-        # 334332, # sweet and sour pork chinese resturaunt
+        334332, # sweet and sour pork chinese resturaunt
         # 327194, # cantaloupe amino acids
         # 327043, # kiwi
         # 325937, # turkey breakfast saucage (mild)
         # 326457, # carrots whole unprepared
         # 321692, # broccoli
         # 327388, # pass 2 oranges
-        326690, # mustard
+        # 326690, # mustard
         # 326744, # figs
-        790281, #butter
-        327636, #strawberee
-        331379, #chicken skin raw (from drumsticks and thighs, non-enhanced)
+        # 790281, #butter
+        # 327636, #strawberee
+        # 331379, #chicken skin raw (from drumsticks and thighs, non-enhanced)
         # 324125, # beef breakfst sausage
         # 322569, # whole milk
-        323413, # ricotta
-        326997, # kiwi
-
-
-
+        # 323413, # ricotta
+        # 748704, # Eggs, whole
+        # 334691, # Amino Acids, Pupusas, Bean, flat stuffed corn biscuit (CA-LA) - NFY0901XO
 
 
     ],
 
     'foodnames': [
         # '2% melk',
-        # 'sweet sour pork',
+        'sweet sour pork',
         # 'cantaloupe',
         # 'kiwi',
         # 'turkey saucage',
         # 'carrots, whole, unprepared',
         # 'broccoli',
         # 'pass 2 oranges',
-        'mustard',
+        # 'mustard',
         # 'mission foigs',
-        'butter stick',
-        'fresh strawbewwies',
-        'chikiskin',
-        'ricotta',
-        # 'whole milk',
+        # 'butter stick',
+        # 'fresh strawbewwies',
+        # 'chikiskin',
         # 'befe sawsoooooge'
+        # 'whole milk',
+        # 'ricotta',
+        # 'whole eggs',
+        # 'pupusas',
     ]
 }
 
