@@ -82,7 +82,9 @@ def read_data():
 def olve(names, nm, rdi):
     # output = np.linalg.lstsq(nm, rdi, rcond=None)[0]
     output = nnls(nm, rdi)[0]
-    print(nm.dot(output))
+    for i in range(len(nm.dot(output))):
+        print(config['nutrients'][i], nm.dot(output)[i])
+    # print(zip(nm.dot(output), config['nutrients']))
     for i,n in enumerate(names):
         print(f"You better goddamn eat {output[i]/10:.6f}g o'", n)
     return output
@@ -106,9 +108,9 @@ def main():
     # print(food_by_id)
     olve(config['foodnames'], food_by_id, config['target'])
 
-    for fid in legit_ids:
-        name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
-        print(fid, name)
+    # for fid in legit_ids:
+    #     name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
+    #     print(fid, name)
 
 if __name__ == '__main__':
     main()
