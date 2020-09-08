@@ -48,25 +48,45 @@ config = {
     'foods': [
         # 320146, # 2% milk
         # 334332, # sweet and sour pork chinese resturaunt
-        327194, # cantaloupe amino acids
-        327043, # kiwi
+        # 327194, # cantaloupe amino acids
+        # 327043, # kiwi
         # 325937, # turkey breakfast saucage (mild)
-        326457, # carrots whole unprepared
-        321692, # broccoli
-        327388, # pass 2 oranges
+        # 326457, # carrots whole unprepared
+        # 321692, # broccoli
+        # 327388, # pass 2 oranges
         326690, # mustard
+        # 326744, # figs
+        790281, #butter
+        327636, #strawberee
+        331379, #chicken skin raw (from drumsticks and thighs, non-enhanced)
+        # 324125, # beef breakfst sausage
+        # 322569, # whole milk
+        323413, # ricotta
+        326997, # kiwi
+
+
+
+
+
     ],
 
     'foodnames': [
         # '2% melk',
         # 'sweet sour pork',
-        'cantaloupe',
-        'kiwi',
+        # 'cantaloupe',
+        # 'kiwi',
         # 'turkey saucage',
-        'carrots, whole, unprepared',
-        'broccoli',
-        'pass 2 oranges',
-        'mustard'
+        # 'carrots, whole, unprepared',
+        # 'broccoli',
+        # 'pass 2 oranges',
+        'mustard',
+        # 'mission foigs',
+        'butter stick',
+        'fresh strawbewwies',
+        'chikiskin',
+        'ricotta',
+        # 'whole milk',
+        # 'befe sawsoooooge'
     ]
 }
 
@@ -83,10 +103,10 @@ def olve(names, nm, rdi):
     # output = np.linalg.lstsq(nm, rdi, rcond=None)[0]
     output = nnls(nm, rdi)[0]
     for i in range(len(nm.dot(output))):
-        print(config['nutrients'][i], nm.dot(output)[i])
-    # print(zip(nm.dot(output), config['nutrients']))
+        print(config['nutrients'][i], nm.dot(output)[i]/config['target'][i]*100, "%")
     for i,n in enumerate(names):
-        print(f"You better goddamn eat {output[i]/10:.6f}g o'", n)
+        if output[i] > 0.001:
+            print(f"You better goddamn eat {output[i]/10:.6f}g o'", n)
     return output
 
 def main():
