@@ -48,15 +48,15 @@ config = {
     'foods': [
         # 320146, # 2% milk
         334332, # sweet and sour pork chinese resturaunt
-        # 327194, # cantaloupe amino acids
+        327194, # cantaloupe amino acids
         # 327043, # kiwi
         # 325937, # turkey breakfast saucage (mild)
         # 326457, # carrots whole unprepared
         # 321692, # broccoli
         # 327388, # pass 2 oranges
-        # 326690, # mustard
+        326690, # mustard
         # 326744, # figs
-        # 790281, #butter
+        790281, #butter
         # 327636, #strawberee
         # 331379, #chicken skin raw (from drumsticks and thighs, non-enhanced)
         # 324125, # beef breakfst sausage
@@ -71,15 +71,15 @@ config = {
     'foodnames': [
         # '2% melk',
         'sweet sour pork',
-        # 'cantaloupe',
+        'cantaloupe',
         # 'kiwi',
         # 'turkey saucage',
         # 'carrots, whole, unprepared',
         # 'broccoli',
         # 'pass 2 oranges',
-        # 'mustard',
+        'mustard',
         # 'mission foigs',
-        # 'butter stick',
+        'butter stick',
         # 'fresh strawbewwies',
         # 'chikiskin',
         # 'befe sawsoooooge'
@@ -119,18 +119,18 @@ def main():
         for nid in insts:
             amount = csvs['food_nutrient'][csvs['food_nutrient']['id'] == nid]
             legit_ids.add(int(amount['fdc_id']))
-            # try:
-            #     ind = config['foods'].index(int(amount['fdc_id']))
-            #     food_by_id[ni, ind] = float(amount['amount'])
-            # except ValueError:
-            #     continue
+            try:
+                ind = config['foods'].index(int(amount['fdc_id']))
+                food_by_id[ni, ind] = float(amount['amount'])
+            except ValueError:
+                continue
 
     # print(food_by_id)
-    # olve(config['foodnames'], food_by_id, config['target'])
+    olve(config['foodnames'], food_by_id, config['target'])
 
-    for fid in legit_ids:
-        name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
-        print(fid, name)
-
+    # for fid in legit_ids:
+    #     name = csvs['food_name'][csvs['food_name']['fdc_id'] == fid]['description'].squeeze()
+    #     print(fid, name)
+    #
 if __name__ == '__main__':
     main()
